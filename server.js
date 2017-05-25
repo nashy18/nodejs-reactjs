@@ -12,7 +12,7 @@ global.utility = require('./api/common/utils')(global.settings);
 //Getting logger module
 //global.logger = require('./common/logger')(global.settings, global.utility);
 //Getting database config
-global.dbProvider = require('./config/database')(global.settings);
+global.dbProvider = require('./config/dataBase')(global.settings);
 
 //Setting Global Variables --Ends
 
