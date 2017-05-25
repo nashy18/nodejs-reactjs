@@ -10,7 +10,8 @@ module.exports = function (app) {
     api.blog = require('./blogRoute')(app);
 
     //Index Route; the home page route
-    app.get('/', require('../../public/routes/index').index);
+    //app.get('/', require('../../public/routes/index').index);
+    app.get('/', redirectToBlogPage);
 
     //Default Route
     app.all('*', function (req, res) {
@@ -20,3 +21,8 @@ module.exports = function (app) {
 
 	return api;
 };
+
+//Function to redirect user from home page to blog page
+function redirectToBlogPage(req,res) {
+    res.redirect('/blog');
+}

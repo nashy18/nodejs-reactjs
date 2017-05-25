@@ -31,11 +31,11 @@ class DefaultLayout extends React.Component {
                         <nav className="navbar">
                           <div className="">
                             <ul className="nav navbar-nav">
-                              <li><a href="#">ABOUT</a></li>
-                              <li><a href="#">MEMBERSHIP BENIFITS</a></li>
-                              <li><a href="#">RESOURCES</a></li>
-                              <li className="active"><a href="/blog">BLOG</a></li>
-                              <li><a href="#">CONTACT</a></li>
+                              <li><a href="#" style={{color:'#18446B'}}>ABOUT</a></li>
+                              <li><a href="#" style={{color:'#18446B'}}>MEMBERSHIP BENIFITS</a></li>
+                              <li><a href="#" style={{color:'#18446B'}}>RESOURCES</a></li>
+                              <li className="active"><a href="/blog" style={{color:'#F1BC32'}}>BLOG</a></li>
+                              <li><a href="#"style={{color:'#18446B'}}>CONTACT</a></li>
                               <li>&nbsp;</li>
                             </ul>
                             <button className="btn btn-yellow navbar-btn">CLAIM FREE REPORT</button>&nbsp;
@@ -44,14 +44,11 @@ class DefaultLayout extends React.Component {
                         </nav>
                    </div>                  
                  </div>
-                <hr />
             </header>
-            <div id="divMainContent" style={{minHeight:'600px'}} className="container">
-                <div className="col-md-12">
-                    {this.props.children}
-                </div>
-            </div>	
-            <hr />	    
+            <div id="divMainContent" style={{minHeight:'600px'}}>
+                {this.props.children}               
+            </div>
+            <hr />	 
 		    <footer>            
 	             <div className="container">                        
                         <div className="col-md-12">
@@ -93,14 +90,14 @@ class DefaultLayout extends React.Component {
     		                        <form>
                                       <div className="input-group">
                                         <span className="input-group-addon"><i className="glyphicon glyphicon-user"></i></span>
-                                        <input id="email" type="text" className="form-control" name="email" placeholder="Email"/>
+                                        <input id="name" type="text" className="form-control" name="name" placeholder="Name" required/>
                                       </div>
                                       <div className="input-group form-group">
-                                        <span className="input-group-addon"><i className="glyphicon glyphicon-lock"></i></span>
-                                        <input id="password" type="password" className="form-control" name="password" placeholder="Password"/>
+                                        <span className="input-group-addon"><i className="glyphicon glyphicon-envelope"></i></span>
+                                        <input id="email" type="email" className="form-control" name="email" placeholder="Email" required/>
                                       </div>
                                       <div className="input-group">
-                                        <button className="btn btn-sm btn-yellow">DOWNLOAD BOOK</button>
+                                        <button type="button" className="btn btn-sm btn-yellow">DOWNLOAD BOOK</button>
                                       </div>
     		                        </form>
                                 </div>                              

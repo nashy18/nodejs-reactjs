@@ -1,8 +1,58 @@
-module.exports = function (app) {
-	console.log("---------------------------");
-	console.log("Inside Blog Route ");
-	console.log("---------------------------");
+module.exports = function (args) {
+    var blogController = {};
 
-    //Blog page route
-    app.get("/blog", require('./public/routes').blog);
+    //Function for creating blog
+    blogController.create = function (req, res, next) {
+        try {
+            if (!req.body) {
+                req.body = [{}];
+            }
+            else {
+                req.body = req.body.request;
+            }
+            next();
+        }
+        catch (e) {
+            res.send(e);
+        }
+    }
+
+    //Function for searching blog by attribures
+    blogController.search = function (req, res, next) {
+        try {
+            if (!req.body) {
+                req.body = {};
+            }
+            next();
+        }
+        catch (e) {
+            res.send(e);
+        }
+    }
+
+    //Function to get all blog entries
+    blogController.getAll = function (req, res, next) {
+        try {
+            req.body = {};
+            next();
+        }
+        catch (e) {
+            res.send(e);
+        }
+    }
+
+    //Function to get blog entry by code
+    blogController.getByCode = function (req, res, next) {
+        try {
+            req.body = {
+                code: req.params.code
+            };
+            next();
+        }
+        catch (e) {
+            res.send(e);
+        }
+    }
+
+    return blogController;
 };

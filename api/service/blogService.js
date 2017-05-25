@@ -1,37 +1,24 @@
-module.exports = function (db) {
-	console.log("---------------------------");
-	console.log("Inside Account DAO ");
-	console.log("---------------------------");
+module.exports = function () {
 
-	var accountDao = {};
+    //Inheriting dbProvider with context to blog
+    var blogService = require('../common/dbProvider')("blog");
+
     var response = {};
 
-    //authenticate 
-    accountDao.authenticate = function (req, res, next) {
+    //function to manipulate the database response 
+    blogService.response = function (req, res, next) {
+        response = {};
         try {
-            ////request can be an array or object
-            //db.account.find(req.authenticateRequest, function (err, result) {
-            //    if (err) {
-            //        res.Success = false;
-            //        appExtensions.logger.error("Error in accountDao.authenticate()" + err);
-            //    }
-            //    else {
-            //        res.response = result;
-            //        res.Success = true;
-            //    }
-            //    next();
-            //});
-            req.filteredRequestBody = req.authenticateRequest;
-            db.Connection.databaseQuery(req, res, next);
+            response.viewModels = res.result;
+            response.Success = true;
+            res.send(response);
         } 
         catch (e) {           
             response.Success = false;
-            response.Message = appExtensions.appConfig.recordReterived_Failed_Message;
-            response.ErrorDetails = "Exception: " + e;
+            response.Error = e;
             res.send(response);
-            appExtensions.logger.error("Exception: " + e);
         };
 	}    
    
-	return accountDao;
+    return blogService;
 }

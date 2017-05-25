@@ -21,3 +21,8 @@
     border-radius: 20px;
     padding: 10px;
 }
+
+.blog-filter-header{
+    background-color: #507FAB;
+    color :white;
+}

@@ -1,7 +1,7 @@
 {
   "name": "nodejs-reactjs",
   "version": "1.0.0",
-  "description": "nodejs + reactjs + expressjs",
+  "description": "nodejs + reactjs + expressjs + mongodb",
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.15.2",
@@ -13,6 +13,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
+  "repository": "https://github.com/nashy18/nodejs-reactjs.git",
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
