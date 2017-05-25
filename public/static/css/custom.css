@@ -1,0 +1,23 @@
+﻿body {
+    font-size: medium;
+}
+
+.header-nav-top{
+    background-color: #18446B;
+}
+
+.btn-yellow{
+    background-color : #F1BC32;
+    color : black;
+}
+
+.btn-dark-blue{
+    background-color : #18446B;
+    color : white;
+}
+
+.footer-icon{
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 10px;
+}
