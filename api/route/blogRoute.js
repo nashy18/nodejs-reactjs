@@ -9,7 +9,7 @@ module.exports = function (app) {
 	var blogService = require('../service/blogService')();
 
     //Webpage route for reterving blog page
-	app.get("/blog", [blogController.getAll, blogService.search, require('../../public/routes/blog').blog]);
+	app.get("/blog", [blogController.search, blogService.search, require('../../public/routes/blog').blog]);
 
     //Webpage route for reterving blog details page
 	app.get("/blog/:code", [blogController.getByCode, blogService.search, require('../../public/routes/blog').blog]);

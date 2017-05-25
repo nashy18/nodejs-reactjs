@@ -6,20 +6,20 @@ class DefaultLayout extends React.Component {
       <html>
         <head>
             <title>{this.props.title}</title>
-	    <link rel="icon" href="http://worshipleadercity.com/wp-content/uploads/2014/09/TCS-Favicon.jpg" type="image/x-icon"/>
+	        <link rel="icon" href="https://cdn.rawgit.com/nashy18/nodejs-reactjs/f17f056e/public/static/images/favicon.jpg" type="image/x-icon"/>
             <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-            <link rel="stylesheet" href="https://cdn.rawgit.com/nashy18/cdn/47cfcedd/css/custom.css" />
+            <link rel="stylesheet" href="https://cdn.rawgit.com/nashy18/cdn/c703fb27/css/custom.css" />
         </head>
         <body>
             <header>  
                 <div className="header-nav-top">
                     <div className="container">
-                       <div className="col-md-4" style={{height:'5px'}}>
+                       <div className="col-md-4 header-nav-top-height">
                             <img src="https://cdn.rawgit.com/nashy18/cdn/adef8b6c/images/facebook_icon.png" />&nbsp;
                             <img src="https://cdn.rawgit.com/nashy18/cdn/adef8b6c/images/Linkedin_icon.png" />&nbsp;
-                            <img src="https://cdn.rawgit.com/nashy18/cdn/adef8b6c/images/facebook_icon.png" />&nbsp;
+                            <img src="https://cdn.rawgit.com/nashy18/cdn/47dd45eb/images/Twitter_icon.png" />&nbsp;
                             <img src="https://cdn.rawgit.com/nashy18/cdn/adef8b6c/images/Youtube_icon.png" />
                        </div>
                        <div className="col-md-8">&nbsp;</div>
@@ -31,11 +31,11 @@ class DefaultLayout extends React.Component {
                         <nav className="navbar">
                           <div className="">
                             <ul className="nav navbar-nav">
-                              <li><a href="#" style={{color:'#18446B'}}>ABOUT</a></li>
-                              <li><a href="#" style={{color:'#18446B'}}>MEMBERSHIP BENIFITS</a></li>
-                              <li><a href="#" style={{color:'#18446B'}}>RESOURCES</a></li>
-                              <li className="active"><a href="/blog" style={{color:'#F1BC32'}}>BLOG</a></li>
-                              <li><a href="#"style={{color:'#18446B'}}>CONTACT</a></li>
+                              <li><a href="#" className="color-dark-blue">ABOUT</a></li>
+                              <li><a href="#" className="color-dark-blue">MEMBERSHIP BENIFITS</a></li>
+                              <li><a href="#" className="color-dark-blue">RESOURCES</a></li>
+                              <li className="active"><a href="/blog" className="color-yellow">BLOG</a></li>
+                              <li><a href="#" className="color-dark-blue">CONTACT</a></li>
                               <li>&nbsp;</li>
                             </ul>
                             <button className="btn btn-yellow navbar-btn">CLAIM FREE REPORT</button>&nbsp;
@@ -45,7 +45,7 @@ class DefaultLayout extends React.Component {
                    </div>                  
                  </div>
             </header>
-            <div id="divMainContent" style={{minHeight:'600px'}}>
+            <div id="divMainContent">
                 {this.props.children}               
             </div>
             <hr />	 

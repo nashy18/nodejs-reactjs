@@ -45,7 +45,7 @@ app.use(function (req, res, next) {
 var routes = require('./api/route/indexRoute')(app);
 
 //Setting up server
-var server = app.listen(process.env.PORT || 8080, function () {
+var server = app.listen(process.env.PORT || global.settings.nodeServerPortNo, function () {
     var port = server.address().port;
     console.log("App now running on port", port);
  }); 

@@ -23,6 +23,17 @@ module.exports = function (args) {
             if (!req.body) {
                 req.body = {};
             }
+            //For filtering blog based on categorycode
+            if (req.query.filterCode) {
+                if (req.query.filterCode == global.settings.blogFilterCode_All) {
+                    req.body = {};
+                }
+                else {
+                    req.body = {
+                        blogCategoryCode: req.query.filterCode
+                    };
+                }                
+            }
             next();
         }
         catch (e) {
