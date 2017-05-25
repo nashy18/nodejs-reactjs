@@ -6,7 +6,7 @@ class DefaultLayout extends React.Component {
       <html>
         <head>
             <title>{this.props.title}</title>
-	    <link rel="icon" href="http://worshipleadercity.com/wp-content/uploads/2014/09/TCS-Favicon.jpg" type="image/x-icon">
+	    <link rel="icon" href="http://worshipleadercity.com/wp-content/uploads/2014/09/TCS-Favicon.jpg" type="image/x-icon"/>
             <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
