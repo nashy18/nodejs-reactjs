@@ -41,6 +41,10 @@ app.use(function (req, res, next) {
 
 //Setting up middlewares & constants --Ends
 
+process.on('uncaughtException', error => {
+   console.log("System Error Occured at " + new Date());
+});
+
 //Initiallising API Routes
 var routes = require('./api/route/indexRoute')(app);
 
